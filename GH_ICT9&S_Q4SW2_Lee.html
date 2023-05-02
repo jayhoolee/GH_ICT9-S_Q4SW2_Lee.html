@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<title>cm to Feet Length Converter</title>
+<body>
+
+<h2>Length Converter</h2>
+<p>Type a value in Hours to seconds/ Hours to Minutes/ Hours to days field to convert the value to Hours to seconds/ Hours to Minutes/ Hours to days:</p>
+
+<p>
+  <label>Hours</label>
+  <input id="input Hours" type="number" placeholder="seconds" oninput="Hourstoseconds(this.value)" onchange="Hourstoseconds(this.value)">
+</p>
+<p>seconds: <span id="output seconds"></span></p>
+
+<script>
+function Hourstoseconds(valNum) {
+  document.getElementById("output seconds").innerHTML=valNum*3600;
+}
+</script>
+<p>
+  <label>Hours</label>
+  <input id="input Hours" type="number" placeholder="Hours" oninput="Hourstominutes(this.value)" onchange="Hourstominutes(this.value)">
+</p>
+<p>Minutes: <span id="output Minutes"></span></p>
+
+<script>
+function Hourstominutes(valNum) {
+  document.getElementById("output Minutes").innerHTML=valNum*60;
+}
+</script>
+<p>
+  <label>Hours</label>
+  <input id="input Hours" type="number" placeholder="days" oninput="Hourstodays(this.value)" onchange="Hourstodays(this.value)">
+</p>
+<p>days: <span id="output days"></span></p>
+
+<script>
+function Hourstodays(valNum) {
+  document.getElementById("output days").innerHTML=valNum/24;
+}
+</script>
+
+</body>
+</html>
